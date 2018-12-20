@@ -1,0 +1,42 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/account-list": [
+                "AccountList/AccountList.js"
+            ],
+            "c/account-list-item": [
+                "accountListItem/accountListItem.js"
+            ],
+            "c/contact-list": [
+                "ContactList/ContactList.js"
+            ],
+            "c/contact-list-item": [
+                "ContactListItem/ContactListItem.js"
+            ],
+            "c/contact-tile": [
+                "ContactTile/ContactTile.js"
+            ],
+            "c/custom-contact-list": [
+                "CustomContactList/CustomContactList.js"
+            ],
+            "c/custom-event": [
+                "CustomEvent/CustomEvent.js"
+            ],
+            "c/error-pannel": [
+                "errorPannel/errorPannel.js"
+            ],
+            "c/search-component": [
+                "searchComponent/searchComponent.js"
+            ],
+            "c/ui-record-api": [
+                "UIRecordAPI/UIRecordAPI.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ]
+}

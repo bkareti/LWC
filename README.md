@@ -1,2 +1,14 @@
-# LWC-Recipes
-Examples related to Salesforce Lightning Web Components
+# SFDX  App
+
+## Dev, Build and Test
+
+
+## Resources
+
+
+## Description of Files and Directories
+
+
+## Issues
+
+

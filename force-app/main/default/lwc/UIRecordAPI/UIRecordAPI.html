@@ -1,0 +1,20 @@
+<template>
+
+        <lightning-card title="Logged In User" icon-name="custom:custom67">
+    
+            <template if:true={user.data}>
+                <div class="slds-m-around_medium">
+                    <p>Id: {userId}</p>
+                    <p>Name: {name}</p>
+                    <p><lightning-formatted-email value={email}></lightning-formatted-email></p>
+                </div>
+                <div class="slds-m-around_medium">
+                    {accountName} <br/>
+                </div>
+            </template>
+            <template if:true={user.error}>
+                <c-error-pannel errors={error} ></c-error-pannel>
+            </template>
+        </lightning-card>
+    
+    </template>
