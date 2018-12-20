@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-m-around_medium">
+           <lightning-input label="Enter Objeect Name" value={objectApiNameInputValue} required></lightning-input> 
+           <lightning-button label="Get Object Info" variant="brand" onclick={handleBtnClick} >
+           </lightning-button>
+           <template if:true={ObjectInfo.data}>
+               <div class="scroller">
+                   <pre>
+                        {objectInfoStr}
+                   </pre>
+               </div>
+           </template>
+    </div>
+</template>

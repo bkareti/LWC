@@ -1,0 +1,44 @@
+<template>
+    <lightning-card title="My First Lightning Web Component" icon-name="custom:custom4">
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value={name}></lightning-formatted-text>
+            </lightning-layout-item>
+        <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value={title}></lightning-formatted-text>
+            </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                        <lightning-formatted-email value={email}></lightning-formatted-email>
+                    </lightning-layout-item>
+                    <lightning-layout-item padding="around-small">
+                            <lightning-formatted-phone value={phone}></lightning-formatted-phone>
+                        </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <lightning-formatted-text value={userId}></lightning-formatted-text>
+            </lightning-layout-item>
+        </lightning-layout>
+        <!-- <lightning-card title="Simple Calculator" icon-name="custom:custom6">
+            <lightning-layout vertical-align="center">
+                <lightning-layout-item padding="around-small">
+                    <lightning-input value={value1} name="field1" label="First Number" 
+                        onchange={handleClick} > </lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <lightning-input value={value2} name="field2" label="Second Number" 
+                        onchange={handleClick} > </lightning-input>
+                </lightning-layout-item>
+                <lightning-layout-item padding="around-small">
+                    <lightning-button label="Add Numbers" variant="brand" onclick={handleSum} >
+                    </lightning-button>
+                </lightning-layout-item>
+                <lightning-layout-item >
+                    <template if:true={sum}>
+                        <p>
+                            The Sum of the 2 Number is :- <strong>{sum}</strong>
+                        </p>
+                    </template>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-card> -->
+    </lightning-card>
+</template>

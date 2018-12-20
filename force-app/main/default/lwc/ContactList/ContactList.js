@@ -1,17 +1,7 @@
-import { LightningElement, api } from 'lwc';
 
-export default class ContactListItem extends LightningElement {
-    @api contact;
-    @api contactdata;
+import { LightningElement, wire } from 'lwc';
+import getContactList from '@salesforce/apex/ContactController.getContactList';
 
-    handleClick(event) {
-        
-        event.preventDefault();
-        
-        const selectEvent = new CustomEvent('select', {
-            detail: this.contact.Id,
-        });
-        
-        this.dispatchEvent(selectEvent);
-    }
+export default class ContactList extends LightningElement {
+    @wire(getContactList) contacts;
 }

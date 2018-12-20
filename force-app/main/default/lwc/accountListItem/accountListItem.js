@@ -3,11 +3,14 @@ import { LightningElement, api } from 'lwc';
 export default class AccountListItem extends LightningElement {
     @api account;
 
-    handleSelect(event){
+    handleClick(event){
         event.preventDefault();
-        const selectEvent = new CustomEvent('select', {
-            detail: this.account.Id,
-        });
-        this.dispatchEvent(selectEvent);
+        const selectedEvent = new CustomEvent(
+            "select",
+            {
+                detail : this.account.Id
+            }
+        );
+        this.dispatchEvent(selectedEvent);
     }
 }

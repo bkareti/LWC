@@ -3,35 +3,50 @@
         "experimentalDecorators": true,
         "baseUrl": ".",
         "paths": {
+            "c/account-info": [
+                "AccountInfo/AccountInfo.js"
+            ],
             "c/account-list": [
                 "AccountList/AccountList.js"
             ],
             "c/account-list-item": [
                 "accountListItem/accountListItem.js"
             ],
+            "c/contact": [
+                "Contact/Contact.js"
+            ],
+            "c/contact-info": [
+                "ContactInfo/ContactInfo.js"
+            ],
             "c/contact-list": [
                 "ContactList/ContactList.js"
             ],
-            "c/contact-list-item": [
-                "ContactListItem/ContactListItem.js"
-            ],
             "c/contact-tile": [
-                "ContactTile/ContactTile.js"
+                "contactTile/contactTile.js"
             ],
-            "c/custom-contact-list": [
-                "CustomContactList/CustomContactList.js"
+            "c/current-user": [
+                "currentUser/currentUser.js"
             ],
-            "c/custom-event": [
-                "CustomEvent/CustomEvent.js"
+            "c/hello-anha-web-component": [
+                "HelloAnhaWebComponent/HelloAnhaWebComponent.js"
             ],
-            "c/error-pannel": [
-                "errorPannel/errorPannel.js"
+            "c/hello-world": [
+                "helloWorld/helloWorld.js"
+            ],
+            "c/load-accounts": [
+                "LoadAccounts/LoadAccounts.js"
+            ],
+            "c/my-first-lwc": [
+                "myFirstLWC/myFirstLWC.js"
+            ],
+            "c/object-info": [
+                "ObjectInfo/ObjectInfo.js"
+            ],
+            "c/record-view-form": [
+                "RecordViewForm/RecordViewForm.js"
             ],
             "c/search-component": [
                 "searchComponent/searchComponent.js"
-            ],
-            "c/ui-record-api": [
-                "UIRecordAPI/UIRecordAPI.js"
             ]
         }
     },

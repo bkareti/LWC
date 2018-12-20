@@ -1,0 +1,28 @@
+<template>
+    <lightning-card title="Show Toast " icon-name='custom:custom4' footer="It's Working ">
+        <c-hello-world></c-hello-world>
+    </lightning-card>
+    <lightning-card title="Apex Imperative Method" icon-name="custom:custom63">
+            <div class="slds-m-around_medium">
+                <p class="slds-m-bottom_small">
+                    <lightning-input value={searchKey} onchange={handleOnchange} ></lightning-input>
+                    <lightning-button label="Load Accounts" variant="brand" onclick={handleLoadAccount}>
+
+                    </lightning-button>
+                </p>
+                <template if:true={accounts}>
+                    <template for:each={accounts} for:item="account">
+                        <p key={account.Id}>
+                            {account.Name} &nbsp;
+                            {account.Phone} &nbsp;
+                            {account.Rating} &nbsp;
+                            {account.Industry} &nbsp;
+                        </p>
+                    </template>
+                </template>
+                <template if:true={error}>
+                    {error}
+                </template>    
+            </div>
+        </lightning-card>
+</template>

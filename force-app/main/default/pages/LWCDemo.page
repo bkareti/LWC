@@ -1,0 +1,13 @@
+<apex:page>
+    <apex:slds />
+    <apex:includeLightning />
+    <div>
+        <strong>Use Lightning Web Component in Visualforce Page</strong>
+    </div>
+    <div id="lwc">
+
+    </div>
+    <script>
+    
+    </script>
+</apex:page>
