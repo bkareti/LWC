@@ -1,4 +1,4 @@
-# SFDX  App
+# Lightning Web Components Recipes
 
 ## Dev, Build and Test
 
