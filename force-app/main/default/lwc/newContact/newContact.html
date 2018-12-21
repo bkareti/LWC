@@ -1,0 +1,7 @@
+<template>
+        <lightning-card title="Custom Lookup in LWC For Contact" icon-name="custom:custom64">
+            <c-custom-lookup iconname="standard:contact" object-name="Contact"
+                             searchfield="Name"
+                             onselectedrec={getRecordId}></c-custom-lookup>
+        </lightning-card>
+    </template>

@@ -4,8 +4,8 @@ export default class CustomLookup extends LightningElement {
     @track records;
     @track error;
     @track selectedRecord;
-    @api iconname = "standard:account";;
-    @api objectName = 'Account';;
+    @api iconname = "standard:account";
+    @api objectName = 'Account';
     @api searchfield = 'Name';
 
     /*constructor(){
@@ -30,8 +30,11 @@ export default class CustomLookup extends LightningElement {
         })
         .then(result => {
             this.records = result;
+            for(let i=0; i < this.records.length; i++){
+                const rec = this.records[i];
+                this.records[i].Name = rec[this.searchfield];
+            }
             this.error = undefined;
-            //console.log(' Record List Updated ', this.records);
         })
         .catch(error => {
             this.error = error;
@@ -41,16 +44,31 @@ export default class CustomLookup extends LightningElement {
     handleSelect(event){
         const selectedRecordId = event.detail;
         /* eslint-disable no-console*/
-        //console.log(' Event Handled on Parent Component ',selectedRecordId);
-        console.log(' Record List ', this.records);
         this.selectedRecord = this.records.find( record => record.Id === selectedRecordId);
-        console.log(' Value for Selected Field  ', this.selectedRecord.Name);
+        /* fire the event with the value of RecordId for the Selected RecordId */
+        const selectedRecordEvent = new CustomEvent(
+            "selectedrec",
+            {
+                detail : selectedRecordId
+            }
+        );
+        this.dispatchEvent(selectedRecordEvent);
     }
 
-    handleRemove(){
-        //event.preventDefault();
-        this.selectedRecord = '';
+    handleRemove(event){
+        event.preventDefault();
+        this.selectedRecord = undefined;
         this.records = undefined;
         this.error = undefined;
+        /* fire the event with the value of undefined for the Selected RecordId */
+        const selectedRecordEvent = new CustomEvent(
+            "selectedrec",
+            {
+                detail : undefined
+            }
+        );
+        this.dispatchEvent(selectedRecordEvent);
     }
+
+
 }

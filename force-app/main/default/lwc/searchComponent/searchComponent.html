@@ -1,11 +1,9 @@
 <template>
-    <div class="slds-p-top_x-small">
-        <lightning-input 
-                label="Search Account" 
-                placeholder="Type text to search account"
-                type="search" 
-                value={searchKey} 
-                onchange={handleOnchange} >
-        </lightning-input>
-    </div>
+    <lightning-layout>
+        <lightning-layout-item>
+            <lightning-input label="Search Record" value={searchKey} type="search" 
+                             onchange={handleChange} placeholder="type text here" >
+            </lightning-input>
+        </lightning-layout-item>
+    </lightning-layout>
 </template>

@@ -1,13 +1,10 @@
 <template>
-    <lightning-layout>
-        <lightning-layout-item class="slds-p-top_x-small">
-            <lightning-icon icon-name="standard:account" size="small" ></lightning-icon>
-            &nbsp; &nbsp;
-        </lightning-layout-item>
-        <lightning-layout-item class="slds-p-top_x-small">
-            <a href="JavaScript:void(0);" onclick={handleClick} >
+    <a href="JavaScript:void(0);" style="text-decoration:none;" onclick={handleSelect} >
+        <lightning-layout vertical-align="center">
+            <lightning-icon icon-name="standard:account" size="small"></lightning-icon>
+            <lightning-layout-item padding="around-small">
                 {account.Name}
-            </a>
-        </lightning-layout-item>
-    </lightning-layout>
+            </lightning-layout-item>
+        </lightning-layout>
+    </a>
 </template>

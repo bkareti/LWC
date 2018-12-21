@@ -1,11 +1,12 @@
 <template>
-   <lightning-card title="Contact List" icon-name="standard:contact">
-        <div class="slds-m-around_medium">
-                <template if:true={contacts}>
-                    <template for:each={contacts.data} for:item="contact" for:index="index">
-                        <c-contact-tile key={contact.Email} contact={contact} ></c-contact-tile>
-                    </template>
-                </template>
-            </div>
-   </lightning-card>
+    <a href="#" onclick={handleClick}>
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item>
+                <img src={contactdata.Picture__c} alt="Profile photo">
+            </lightning-layout-item>
+            <lightning-layout-item padding="around-small">
+                <p>{contactdata.Name}</p>
+            </lightning-layout-item>
+        </lightning-layout>
+    </a>
 </template>

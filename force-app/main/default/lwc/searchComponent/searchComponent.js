@@ -1,13 +1,17 @@
 import { LightningElement, track } from 'lwc';
 
 export default class SearchComponent extends LightningElement {
-    @track searchKey ='';
-
-    handleOnchange(event){
+    
+    @track searchKey;
+    handleChange(event){
+        /* eslint-disable no-console */
+        //console.log('Search Event Started ');
         const searchKey = event.target.value;
-        var searchEvent = new CustomEvent(
-            'search',
-            {
+        /* eslint-disable no-console */
+        event.preventDefault();
+        const searchEvent = new CustomEvent(
+            'change', 
+            { 
                 detail : searchKey
             }
         );
